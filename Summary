@@ -1,0 +1,9 @@
+Drawbacks (AroundClosure):
+
+ - The use of reflective features like thisJoinPoint
+   - This can compromise the use of this idiom on mobile devices (JavaME)
+    
+ Benefits of AroundClosure over (previous ones):
+ 
+  + works with privileged access
+  + supports intertype declarations

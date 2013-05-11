@@ -1,0 +1,27 @@
+LayeredAspects (AroundClosure)
+
+  (1) Code locality - (high)
+    + driver code localized in only one place (QuoteDynamic) 
+    + no more pointcut redefinitions
+      
+  (2) Reusability - (high)
+      + the only one around advice (used with adviceexecution-pointcut) that intercept 
+        all kinds of advice can be reused in the standard AspectJ syntax.
+        
+   (3) Changeability - (high)
+       + all changes are localized into one place (e.g, QuoteDynamic).
+        
+   (4) Plugabbility - (yes)
+       + only the QuoteDynamic should be removed of the build to take off the
+         binding time issue.
+       
+   (5) Code instrumentation/overhead (low)
+        + the around advice in QuoteDynamic instruments, in a generic way, all the 
+          advice in the application.
+          
+        + since we don't have unecessary instrumentation, the execution time is reduced
+          in relation to previous idioms.
+      
+        
+
+ 
